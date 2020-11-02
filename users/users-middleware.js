@@ -15,7 +15,7 @@ function restrict(role) {
 
 			// get the token value from a manual header and make sure it's not empty
 			const token = req.headers.authorization
-			if (!token) {
+			//const token = req.cookies.token          for cookies
 				return res.status(401).json({
 					message: "Invalid credentials",
 				})
